@@ -4242,7 +4242,7 @@ function Library:CreateWindow(...)
             Size = UDim2.new(1, -4, 1, 0);
             BackgroundTransparency = 1;
             Font = Library.Font;
-            Text = "Hide";
+            Text = "Show UI";
             TextColor3 = Library.FontColor;
             TextSize = 14;
             TextXAlignment = Enum.TextXAlignment.Left;
@@ -4255,7 +4255,7 @@ function Library:CreateWindow(...)
 
         ToggleUIButton.MouseButton1Click:Connect(function()
         task.spawn(Library.Toggle)
-        ToggleUIButton.Text = Library.Toggled and "Hide" or "Show"
+        ToggleUIButton.Text = Library.Toggled and "Hide UI" or "Show UI"
 end)
 
     -- Lock
@@ -4313,7 +4313,7 @@ end)
             Size = UDim2.new(1, -4, 1, 0);
             BackgroundTransparency = 1;
             Font = Library.Font;
-            Text = "Lock Gui";
+            Text = "Toggle UI";
             TextColor3 = Library.FontColor;
             TextSize = 14;
             TextXAlignment = Enum.TextXAlignment.Left;
