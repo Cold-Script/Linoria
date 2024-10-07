@@ -4242,7 +4242,7 @@ function Library:CreateWindow(...)
             Size = UDim2.new(1, -4, 1, 0);
             BackgroundTransparency = 1;
             Font = Library.Font;
-            Text = "Hide UI";
+            Text = "Toggle UI";
             TextColor3 = Library.FontColor;
             TextSize = 14;
             TextXAlignment = Enum.TextXAlignment.Left;
@@ -4250,12 +4250,12 @@ function Library:CreateWindow(...)
             ZIndex = 203;
             Parent = ToggleUIInnerFrame;
         });
-    
+        local UICorner = Instance.new("UICorner", ToggleUIButton)
+            
         Library:MakeDraggable(ToggleUIOuter);
 
         ToggleUIButton.MouseButton1Click:Connect(function()
         task.spawn(Library.Toggle)
-        ToggleUIButton.Text = Library.Toggled and "Show UI" or "Hide UI"
 end)
         end;
 
